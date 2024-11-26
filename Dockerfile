@@ -8,8 +8,8 @@ RUN cp /usr/local/bin/pip3 /usr/local/bin/pip
 WORKDIR /
 RUN git clone --branch ZH-Clap https://github.com/fishaudio/Bert-VITS2.git
 WORKDIR /Bert-VITS2
-# RUN pip3 install -r requirements.txt
-RUN pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip3 install -r requirements.txt
+# RUN pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 RUN echo "import nltk" > init.py
 RUN echo "nltk.download('cmudict')" >> init.py
 ENV PATH="/usr/local/bin:${PATH}"
